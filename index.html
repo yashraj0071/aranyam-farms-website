@@ -5,239 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aranyam Farms</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #2e7d32;
-      --light: #f9fbe7;
-      --accent: #c8e6c9;
-      --text: #333;
-      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--light);
-      color: var(--text);
-    }
-
-    nav {
-      background: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: var(--shadow);
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      padding: 1rem;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    nav a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: var(--primary);
-    }
-
-    header {
-      background: linear-gradient(to right, #1b5e20, #388e3c);
-      color: white;
-      padding: 3rem 1.5rem 2rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
-    }
-
-    .logo {
-      max-width: 120px;
-      margin: 0 auto 1rem;
-    }
-
-    .tagline {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      opacity: 0.95;
-    }
-
-    .cta {
-      display: inline-block;
-      background-color: var(--primary);
-      color: white;
-      padding: 0.8rem 1.6rem;
-      border-radius: 8px;
-      margin-top: 1rem;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .cta:hover {
-      background-color: #1b5e20;
-    }
-
-    .categories {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin: 2rem;
-    }
-
-    .category {
-      background-color: var(--accent);
-      padding: 0.8rem 1.2rem;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: 500;
-      transition: background 0.3s;
-    }
-
-    .category:hover, .category.selected {
-      background-color: #81c784;
-      color: white;
-    }
-
-    .products {
-      display: none;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      padding: 3rem 2rem;
-    }
-
-    .products.active {
-      display: grid;
-    }
-
-    .product {
-      background-color: white;
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      padding: 2rem 1.5rem;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .product:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    }
-
-    .product-img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-    }
-
-    .product h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-      color: var(--primary);
-    }
-
-    .product p {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 1rem;
-    }
-
-    .product button {
-      background-color: #25D366;
-      color: white;
-      border: none;
-      padding: 0.7rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .product button:hover {
-      background-color: #1ebc59;
-    }
-
-    section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1.2rem;
-      color: var(--primary);
-    }
-
-    .about, .contact, .testimonials {
-      background-color: white;
-      border-radius: 16px;
-      padding: 2rem;
-      box-shadow: var(--shadow);
-      margin-bottom: 20px;
-    }
-
-    .about p, .contact p, .testimonials blockquote {
-      color: #444;
-      margin-bottom: 1rem;
-    }
-
-    .contact a {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    footer {
-      background-color: #e8f5e9;
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      .tagline {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
 </head>
-<body>
+<body> 
   <nav>
     <ul>
       <li><a href="#">Home</a></li>
-     
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <header>
-    <img class="logo" src="https://i.pinimg.com/736x/b2/9e/99/b29e991c78bef89ce93cff1554a284d3.jpg" alt="Aranyam Farms Logo" />
+    <img class="logo" src="https://i.pinimg.com/736x/b2/9e/99/b29e991c78bef89ce93cff1554a284d3.jpg" alt="Aranyam Farms Logo" >
     <h1>Aranyam Farms</h1>
     <div class="tagline">We bring nature's bounty to your doorstep — fresh, organic, and sustainable.</div>
     <a class="cta" href="https://wa.me/9404132099">Order Now on WhatsApp</a>
@@ -250,16 +31,16 @@
     <div class="category" onclick="showCategory(event, 'poultry')">Poultry Products</div>
   </div>
   
-   <!-- Solar -->
+  <!-- Solar -->
   <section id="solar" class="products">
     <div class="product">
-      <img src="https://nenpower.com/wp-content/uploads/2024/11/image-106089.jpg" alt="Solar Dried xyz" width="150" height="70">
+      <img src="https://nenpower.com/wp-content/uploads/2024/11/image-106089.jpg" alt="Solar Dried xyz"width="150">
       <h3>Solar Dried xyz</h3>
       <p>₹250 / 200g</p>
       <button onclick="orderNow('Solar Dried xyz')">Order on WhatsApp</button>
     </div>
     <div class="product">
-      <img src="https://i.pinimg.com/736x/4e/47/48/4e4748a055ee9f7165647d26f5862fda.jpg" alt="Dried Tamato" width="150" height="70">
+      <img src="https://i.pinimg.com/736x/4e/47/48/4e4748a055ee9f7165647d26f5862fda.jpg" alt="Dried Tamato"width="150">
       <h3>Dried Tamato</h3>
       <p>₹150 / 100g</p>
       <button onclick="orderNow('Dried Vegetables')">Order on WhatsApp</button>
@@ -269,7 +50,7 @@
   <!-- Fruits -->
   <section id="fruits" class="products">
     <div class="product">
-            <img src="https://i.pinimg.com/736x/e1/ad/ea/e1adea974103dfe469bd6a4e75202f64.jpg" alt="Dried Tamato" width="150" height="70">
+      <img src="https://i.pinimg.com/736x/e1/ad/ea/e1adea974103dfe469bd6a4e75202f64.jpg" alt="Organic Mango" width="150">
       <h3>Organic Mango (1kg)</h3>
       <p>₹120</p>
       <button onclick="orderNow('Organic Mango')">Order on WhatsApp</button>
@@ -279,7 +60,7 @@
   <!-- Vegetables -->
   <section id="vegetables" class="products">
     <div class="product">
-      <img src="https://i.pinimg.com/736x/77/c1/b5/77c1b5d0463096ed46f524cce553acac.jpg" alt="Dried Tamato" width="130" height="80">
+      <img src="https://i.pinimg.com/736x/77/c1/b5/77c1b5d0463096ed46f524cce553acac.jpg" alt="Natural Lemons" width="150">
       <h3>Natural Lemons (500g)</h3>
       <p>₹40</p>
       <button onclick="orderNow('Natural Lemons')">Order on WhatsApp</button>
@@ -289,21 +70,18 @@
   <!-- Poultry -->
   <section id="poultry" class="products">
     <div class="product">
-      <img src="https://i.pinimg.com/736x/50/4a/70/504a70fab119fdaa985c0128d547a588.jpg" alt="Dried Tamato" width="150" height="70">
+      <img src="https://i.pinimg.com/736x/50/4a/70/504a70fab119fdaa985c0128d547a588.jpg" alt="Farm Fresh Eggs" width="150">
       <h3>Farm Fresh Eggs (12 pcs)</h3>
       <p>₹180</p>
       <button onclick="orderNow('Farm Fresh Eggs')">Order on WhatsApp</button>
     </div>
     <div class="product">
-      <img src="https://i.pinimg.com/736x/98/4c/d6/984cd60c46578dfbdd0f646d27ba9f40.jpg" alt="Dried Tamato" width="150" height="70">
+      <img src="https://i.pinimg.com/736x/98/4c/d6/984cd60c46578dfbdd0f646d27ba9f40.jpg" alt="Country Chicken" width="150">
       <h3>Country Chicken (1kg)</h3>
       <p>₹350</p>
       <button onclick="orderNow('Country Chicken')">Order on WhatsApp</button>
     </div>
   </section>
-
-  <!-- Product sections stay the same -->
-  <!-- ... (no change needed in existing product content) -->
 
   <section id="about" class="about">
     <h2>About Aranyam Farms</h2>
@@ -311,8 +89,6 @@
       At Aranyam Farms, everything is grown naturally with love — no chemicals, no shortcuts. Our solar-dried goods, farm-raised poultry, and handpicked fruits and vegetables are harvested from our sustainable farm and delivered straight to your home.
     </p>
   </section>
-
-  
 
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
@@ -328,23 +104,6 @@
        <a href="mailto:aranyamfarms@gmail.com">Email</a> | 
        <a href="tel:+9404132099">Call</a></p>
   </footer>
-
-  <script>
-    function orderNow(product) {
-      const message = `Hi! I'm interested in ordering: ${product} from Aranyam Farms. Please share the details.`;
-      const phone = "9404132099";
-      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-      window.open(url, '_blank');
-    }
-
-    function showCategory(event, category) {
-      document.querySelectorAll('.products').forEach(section => section.classList.remove('active'));
-      document.querySelectorAll('.category').forEach(btn => btn.classList.remove('selected'));
-      document.getElementById(category).classList.add('active');
-      event.target.classList.add('selected');
-      window.scrollTo({ top: document.getElementById(category).offsetTop - 80, behavior: 'smooth' });
-    }
-  </script>
 
 </body>
 </html>
