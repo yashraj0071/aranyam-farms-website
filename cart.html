@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart - Aranyam Farms</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cart-style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="cart-icon">
+    <div class="cart-count">
+      <div class="logo-nav">
+        <img src="/images/logo.jpg" alt="Aranyam Farms">
+        <h2>Aranyam Farms</h2>
+      </div>
+      <a href="index.html" class="back-btn">← Back to Shop</a>
+    </div>
+  </nav>
+
+  <div class="cart-container">
+    <div class="cart-header">
+      <h1>🛒 Your Fresh Cart</h1>
+      <p>Fresh organic products ready for delivery</p>
+    </div>
+
+    <div class="cart-content">
+      <div class="cart-items" id="cart-items">
+        <!-- Cart items will be loaded here -->
+      </div>
+    </div>
+
+    <div class="cart-summary" id="cart-summary" style="display: none;">
+      <div class="total-amount" id="total-amount">Total: ₹0</div>
+      <button class="checkout-btn" onclick="checkoutCart()">
+        📱 Order via WhatsApp
+      </button>
+    </div>
+
+    <div class="empty-cart" id="empty-cart">
+      <div class="empty-cart-icon">🌱</div>
+      <h3>Your cart is empty</h3>
+      <p>Add some fresh organic products to get started!</p>
+      <a href="index.html" class="continue-shopping">
+        🛍️ Continue Shopping
+      </a>
+    </div>
+  </div>
+
+  <script src="cart-script.js"></script>
+</body>
+</html>

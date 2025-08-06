@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aranyam Farms</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-   
 </head>
 <body> 
   <nav>
@@ -14,83 +14,112 @@
       <li><a href="#">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li>
+        <a class="cart-icon" href="cart.html">
+           🛒 Cart
+          <span class="cart-count" id="cart-count">0</span>
+        </a>
+      </li>
     </ul>
   </nav>
 
   <header>
-    <img class="logo" src="/Users/yashrajpatil/Downloads/Genius club logo.PNG.jpg" alt="Aranyam Farms Logo" >
+    <img class="logo" src="images/logo.jpg" alt="Aranyam Farms Logo" >
     <h1>Aranyam Farms</h1>
     <div class="tagline">We bring nature's bounty to your doorstep — fresh, organic, and sustainable.</div>
-    <a class="cta" href="https://wa.me/9404132099">Order Now on WhatsApp</a>
+    <a class="cta" href="https://wa.me/9404132099" data-aos="zoom-in">Order Now on WhatsApp</a>
   </header>
 
   <div class="categories">
-    <div class="category" onclick="showCategory(event, 'solar')">Solar Drier</div>
-    <div class="category" onclick="showCategory(event, 'fruits')">Fruits</div>
-    <div class="category" onclick="showCategory(event, 'vegetables')">Vegetables</div>
-    <div class="category" onclick="showCategory(event, 'poultry')">Poultry Products</div>
+    <div class="category" onclick="showCategory(event, 'solar')" data-aos="zoom-in">Solar Drier</div>
+    <div class="category" onclick="showCategory(event, 'fruits')" data-aos="zoom-in">Fruits</div>
+    <div class="category" onclick="showCategory(event, 'vegetables')" data-aos="zoom-in">Vegetables</div>
+    <div class="category" onclick="showCategory(event, 'poultry')" data-aos="zoom-in">Poultry Products</div>
   </div>
   
   <!-- Solar -->
   <section id="solar" class="products">
-    <div class="product">
-      <img src="/project/aranyam-farms-website/images/veg.jpg" alt="Solar Dried xyz"width="150">
-      <h3>Solar Dried xyz</h3>
-      <p>₹250 / 200g</p>
-      <button onclick="orderNow('Solar Dried xyz')">Order on WhatsApp</button>
+    <div class="product" data-aos="zoom-in-up">
+      <img src="images/veg.jpg" alt="Solar Dried Currry leaves" width="150">
+      <h3>Dehydrated Curry <br> Leaves</h3>
+      <p>₹200 / 100g</p>
+      <div class="product-buttons">
+        <button class="cart-btn" onclick="addToCart('Dehydrated Curry Leaves', 200)">Add to Cart</button>
+      </div>
     </div>
-    <div class="product">
-      <img src="/project/aranyam-farms-website/images/tamaato.jpg" alt="Dried Tamato"width="150">
-      <h3>Dried Tamato</h3>
-      <p>₹150 / 100g</p>
-      <button onclick="orderNow('Dried Vegetables')">Order on WhatsApp</button>
+    <div class="product" data-aos="zoom-in-up">
+      <img src="images/tamaato.jpg" alt="Dehydrated Tomato Flakes" width="150">
+      <h3>Dehydrated Tomato Flakes</h3>
+      <p>210 / 100g</p>
+        <button class="cart-btn" onclick="addToCart('Dehydrated Tomato Flakes', 210)">Add to Cart</button>
+    </div>
+    <div class="product" data-aos="zoom-in-up">
+      <img src="images/veg.jpg" alt="Dehydrated Beetroot Flakes" width="150">
+      <h3>Dehydrated Beetroot Flakes</h3>
+      <p>₹170 / 100g</p>
+        <button class="cart-btn" onclick="addToCart('Dehydrated Beetroot Flakes', 170)">Add to Cart</button>
+    </div>
+    <div class="product" data-aos="zoom-in-up">
+      <img src="images/veg.jpg" alt="Dehydrated Beetroot Flakes" width="150">
+      <h3>Dehydrated Bittergourd Flakes</h3>
+      <p>170 / 100g</p>
+      <button onclick="orderNow('Dehydrated Bittergourd Flakes')">Order on WhatsApp</button>
+    </div>
+    <div class="product" data-aos="zoom-in-up">
+      <img src="images/veg.jpg" alt="Dehydrated Coriander Leaves" width="150">
+      <h3>Dehydrated Coriander Leaves</h3>
+      <p>₹170 / 100g</p>
+        <button class="cart-btn" onclick="addToCart('Dehydrated Coriander Leaves', 170)">Add to Cart</button>
+    </div>
+    <div class="product" data-aos="zoom-in-up">
+      <img src="images/veg.jpg" alt="Dehydrated Onion" width="150">
+      <h3>Dehydrated Onion</h3>
+      <p>₹170 / 100g</p>
+        <button class="cart-btn" onclick="addToCart('Dehydrated Onion', 170)">Add to Cart</button>
     </div>
   </section>
 
   <!-- Fruits -->
   <section id="fruits" class="products">
-    <div class="product">
-      <img src="/project/aranyam-farms-website/images/mango.jpg" alt="Organic Mango" width="150">
-      <h3>Organic Mango (1kg)</h3>
-      <p>₹120</p>
-      <button onclick="orderNow('Organic Mango')">Order on WhatsApp</button>
+    <div class="product" data-aos="flip-left">
+      <img src="images/mango.jpg" alt="Organic Mango" width="150">
+      <h3>Organic Kesar Mango (1kg)</h3>
+      <p>₹400</p>
+        <button class="cart-btn" onclick="addToCart('Organic Kesar Mango (1kg)', 400)">Add to Cart</button>
     </div>
-  </section>
-
-  <!-- Vegetables -->
-  <section id="vegetables" class="products">
-    <div class="product">
-      <img src="/project/aranyam-farms-website/images/lemon.jpg" alt="Natural Lemons" width="150">
+    
+    <div class="product" data-aos="flip-left">
+      <img src="images/lemon.jpg" alt="Natural Lemons" width="150">
       <h3>Natural Lemons (500g)</h3>
-      <p>₹40</p>
-      <button onclick="orderNow('Natural Lemons')">Order on WhatsApp</button>
+      <p>₹50</p>
+        <button class="cart-btn" onclick="addToCart('Natural Lemons (500g)', 50)">Add to Cart</button>
     </div>
   </section>
 
   <!-- Poultry -->
   <section id="poultry" class="products">
-    <div class="product">
-      <img src="/project/aranyam-farms-website/images/egg.jpg" alt="Farm Fresh Eggs" width="150">
+    <div class="product" data-aos="flip-left">
+      <img src="images/egg.jpg" alt="Farm Fresh Eggs" width="150">
       <h3>Farm Fresh Eggs (12 pcs)</h3>
       <p>₹180</p>
-      <button onclick="orderNow('Farm Fresh Eggs')">Order on WhatsApp</button>
+        <button class="cart-btn" onclick="addToCart('Farm Fresh Eggs (12 pcs)', 180)">Add to Cart</button>
     </div>
-    <div class="product">
-      <img src="/project/aranyam-farms-website/images/chikan.jpg" alt="Country Chicken" width="150">
-      <h3>Country Chicken (1kg)</h3>
-      <p>₹350</p>
-      <button onclick="orderNow('Country Chicken')">Order on WhatsApp</button>
+    <div class="product" data-aos="flip-left">
+      <img src="images/chikan.JPG" alt="Country Chicken" width="150">
+      <h3>Country Chicken (1N)</h3>
+      <p>₹450</p>
+        <button class="cart-btn" onclick="addToCart('Country Chicken (1N)', 450)">Add to Cart</button>
     </div>
   </section>
 
-  <section id="about" class="about">
+  <section id="about" class="about" data-aos="slide-up" data-aos-delay="150">
     <h2>About Aranyam Farms</h2>
     <p>
       At Aranyam Farms, everything is grown naturally with love — no chemicals, no shortcuts. Our solar-dried goods, farm-raised poultry, and handpicked fruits and vegetables are harvested from our sustainable farm and delivered straight to your home.
     </p>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact" class="contact" data-aos="slide-up" data-aos-delay="150">
     <h2>Contact Us</h2>
     <p>📞 Phone: 9404132099</p>
     <p>📧 Email: <a href="mailto:aranyamfarms@gmail.com">aranyamfarms@gmail.com</a></p>
@@ -104,6 +133,16 @@
        <a href="mailto:aranyamfarms@gmail.com">Email</a> | 
        <a href="tel:9404132099">Call</a></p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      easing: 'ease-in-out',
+      offset: 100,
+      once: true
+    });
+  </script>
 
   <script src="script.js"></script>
 </body>
